@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ArkhamHorrorCompanionApp.StartPage"
+             Background="Gray">
+
+    <VerticalStackLayout>
+        <Label 
+            Text="Welcome to"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" 
+            Margin="20"/>
+        <Label 
+            Text="The Arkham Horror Companion App"
+            VerticalOptions="Center"
+            FontSize="16"
+            HorizontalOptions="Center" 
+            Margin="10"/>
+
+        <Label 
+            Text="How many investigators will partake in this scenario?"
+            VerticalOptions="Center"
+            FontSize="14"
+            HorizontalOptions="Center" 
+            Margin="20"/>
+
+        <Label 
+            x:Name="WarningLabel"
+            Text="Number of investigators not selected"
+            VerticalOptions="Center"
+            FontSize="14"
+            TextColor="Red"
+            HorizontalOptions="Center" 
+            Margin="0"
+            IsVisible="False"/>
+        <Picker x:Name="PlayerCountPicker"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+            Title="Select number of investigators">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>True solo</x:String>
+                    <x:String>Two investigators</x:String>
+                    <x:String>Three investigators</x:String>
+                    <x:String>Four investigators</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+
+        <Button 
+            Text="Begin new game"
+            VerticalOptions="End"
+            WidthRequest="150"
+            BackgroundColor="Green"
+            Clicked="Begin_Clicked"
+            />
+    </VerticalStackLayout>
+</ContentPage>

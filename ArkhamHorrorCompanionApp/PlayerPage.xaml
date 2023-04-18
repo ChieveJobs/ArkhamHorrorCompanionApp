@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ArkhamHorrorCompanionApp.PlayerPage"
+             Title="PlayerPage">
+    <VerticalStackLayout>
+        <Grid Margin="0, 30">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Label 
+                Grid.Row="0"
+                Grid.Column="0"
+                Text="Take your turn"
+                Padding="25, 35"
+                />
+            <Image 
+                Grid.Row="0"
+                Grid.Column="1"
+                Source="player1image.png"
+                HeightRequest="100"
+                />
+        </Grid>
+        <Grid
+            Margin="0,50, 0 ,40">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Label 
+                Grid.Row="0"
+                Grid.Column="0"
+                Text="Action 1"
+                Padding="50, 16"/>
+            <CheckBox Grid.Row="0"
+                      Grid.Column="1"
+                      CheckedChanged="CheckBox_CheckedChanged"/>
+
+            <Label 
+                Grid.Row="1"
+                Grid.Column="0"
+                Text="Action 2"
+                Padding="50, 16"/>
+            <CheckBox Grid.Row="1"
+                      Grid.Column="1"
+                      CheckedChanged="CheckBox_CheckedChanged"/>
+
+            <Label 
+                Grid.Row="2"
+                Grid.Column="0"
+                Text="Action 3"
+                Padding="50, 16"/>
+            <CheckBox Grid.Row="2"
+                      Grid.Column="1"
+                      CheckedChanged="CheckBox_CheckedChanged"/>
+        </Grid>
+        <Button 
+            x:Name="DoneButton"
+            Text="Done"
+            IsEnabled="False"
+            WidthRequest="200"
+            VerticalOptions="End"
+            Clicked="Done_Clicked"
+            />
+    </VerticalStackLayout>
+</ContentPage>

@@ -1,41 +1,70 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ArkhamHorrorCompanionApp.MainPage">
-
+             x:Class="ArkhamHorrorCompanionApp.MainPage"
+             Title="MainPage">
     <ScrollView>
         <VerticalStackLayout
             Spacing="25"
-            Padding="30,0"
-            VerticalOptions="Center">
-
-            <Image
-                Source="dotnet_bot.png"
-                SemanticProperties.Description="Cute dot net bot waving hi to you!"
-                HeightRequest="200"
-                HorizontalOptions="Center" />
-
+            Padding="30,0">
             <Label
-                Text="Hello, World!"
-                SemanticProperties.HeadingLevel="Level1"
-                FontSize="32"
-                HorizontalOptions="Center" />
+                Text="Choose players turn"
+                FontSize="20"
+                HorizontalTextAlignment="Center"
+                Margin="0, 150, 0, 20"/>
 
-            <Label
-                Text="Welcome to .NET Multi-platform App UI"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
-                FontSize="18"
-                HorizontalOptions="Center" />
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="200" />
+                    <RowDefinition Height="200" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <ImageButton
+                    x:Name="Player1Image"
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Source="player1image.png"
+                    SemanticProperties.Description="Player1"
+                    HeightRequest="200"
+                    HorizontalOptions="Center"
+                    IsVisible="False"
+                    Clicked="Player1Image_Clicked"/>
 
-            <Button
-                x:Name="CounterBtn"
-                Text="Click me"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
-                HorizontalOptions="Center" />
+                <ImageButton
+                    x:Name="Player2Image"
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    Source="player2image.png"
+                    SemanticProperties.Description="Player2"
+                    HeightRequest="200"
+                    HorizontalOptions="Center"
+                    IsVisible="False"
+                    Clicked="Player2Image_Clicked"/>
 
+                <ImageButton
+                    x:Name="Player3Image"
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    Source="dotnet_bot.png"
+                    SemanticProperties.Description="Player1"
+                    HeightRequest="200"
+                    HorizontalOptions="Center"
+                    IsVisible="False"/>
+
+                <ImageButton
+                    x:Name="Player4Image"
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Source="dotnet_bot.png"
+                    SemanticProperties.Description="Player2"
+                    HeightRequest="200"
+                    HorizontalOptions="Center"
+                    IsVisible="False"/>
+
+            </Grid>
         </VerticalStackLayout>
     </ScrollView>
-
 </ContentPage>

@@ -1,27 +1,23 @@
-﻿using ArkhamHorrorCompanionApp.Enums;
-
-namespace ArkhamHorrorCompanionApp.Models
+﻿namespace ArkhamHorrorCompanionApp.Models
 {
     public class GameSession
     {
         public int Turn { get; set; }
 
-        public GamePhase GamePhase { get; set; }
+        public List<Investigator> Investigators { get; set; }
 
-        public List<Player> Players { get; set; }
-
-        public int PlayerCount
+        public int InvestigatorCount
         {
             get
             {
-                return Players.Count;
+                return Investigators.Count;
 
             }
         }
 
         public GameSession()
         {
-            Players = new List<Player>();
+            Investigators = new List<Investigator>();
             Turn = 1;
         }
     }

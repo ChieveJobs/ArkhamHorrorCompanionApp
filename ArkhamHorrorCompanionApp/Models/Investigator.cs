@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace ArkhamHorrorCompanionApp.Models
 {
-    public class Player
+    public class Investigator
     {
-        public int PlayerNumber { get; set; }
+        public int InvestigatorNumber { get; set; }
         public bool HasActed { get; set; }
 
-        public Player(int playerNumber)
+        public Investigator(int investigatorNumber)
         {
-            PlayerNumber = playerNumber;
+            InvestigatorNumber = investigatorNumber;
             HasActed = false;
         }
     }

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ArkhamHorrorCompanionApp.Pages.PlayerTurnPage"
-             Title="PlayerTurnPage">
+             x:Class="ArkhamHorrorCompanionApp.Pages.InvestigatorTurnPage"
+             Title="Take your turn">
     <VerticalStackLayout>
         <Grid Margin="0, 30">
             <Grid.RowDefinitions>
@@ -13,9 +13,10 @@
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
             <Label 
+                x:Name="InvestigatorLabel"
                 Grid.Row="0"
                 Grid.Column="0"
-                Text="Take your turn"
+                Text="Investigator "
                 Padding="25, 35"
                 />
             <Image 

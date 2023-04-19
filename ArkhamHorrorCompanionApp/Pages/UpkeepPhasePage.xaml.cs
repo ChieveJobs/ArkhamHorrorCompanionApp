@@ -11,13 +11,15 @@ public partial class UpkeepPhasePage : ContentPage
 		InitializeComponent();
 	}
 
-    private void DoneButton_Clicked(object sender, EventArgs e)
+    private async void DoneButton_Clicked(object sender, EventArgs e)
     {
-		foreach(var player in _gameSession.Players)
+		foreach(var investigator in _gameSession.Investigators)
 		{
-			player.HasActed = false;
+            investigator.HasActed = false;
 		}
 
-		_gameSession.Turn = _gameSession.Turn++;
+		_gameSession.Turn++;
+
+		await Navigation.PopToRootAsync();
     }
 }

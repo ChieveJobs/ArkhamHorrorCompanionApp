@@ -74,7 +74,7 @@
 	  <MauiXaml Update="Pages\MythosPhasePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Pages\PlayerTurnPage.xaml">
+	  <MauiXaml Update="Pages\InvestigatorTurnPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Pages\UpkeepPhasePage.xaml">
@@ -95,8 +95,8 @@
 	  <Compile Update="Pages\InvestigationPhasePage.xaml.cs">
 	    <DependentUpon>InvestigationPhasePage.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="Pages\PlayerTurnPage.xaml.cs">
-	    <DependentUpon>PlayerTurnPage.xaml</DependentUpon>
+	  <Compile Update="Pages\InvestigatorTurnPage.xaml.cs">
+	    <DependentUpon>InvestigatorTurnPage.xaml</DependentUpon>
 	  </Compile>
 	</ItemGroup>
 

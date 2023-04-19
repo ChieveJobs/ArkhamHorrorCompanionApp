@@ -33,7 +33,7 @@
             HorizontalOptions="Center" 
             Margin="0"
             IsVisible="False"/>
-        <Picker x:Name="PlayerCountPicker"
+        <Picker x:Name="InvestigatorCountPicker"
                 HorizontalOptions="Center"
                 VerticalOptions="Center"
             Title="Select number of investigators">

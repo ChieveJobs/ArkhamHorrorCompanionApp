@@ -25,54 +25,67 @@
             Margin="50"
             Clicked="AddMythosButton_Clicked"/>
 
-        <!--! ENCOUNTER STUFF-->
+        <!-- FIRST TURN SKIP BUTTON -->
 
-        <Label 
+        <Button 
+            x:Name="SkipButton"
+            IsVisible="False"
+            AbsoluteLayout.LayoutBounds="0.5,0.45,0,150"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            Text="Skip"
+            WidthRequest="100"
+            Margin="50"
+            Clicked="DoneButton_Clicked"
+            BackgroundColor="Red"/>
+
+        <!-- ENCOUNTER STUFF-->
+
+        <Label IsVisible="False"
             x:Name="Investigator1Label"
             AbsoluteLayout.LayoutBounds="0,0.65 , 200,100"
             AbsoluteLayout.LayoutFlags="PositionProportional"
             Text="Investigator 1"
             Margin="20, 12"/>
-        <CheckBox
+        <CheckBox IsVisible="False"
             x:Name="Investigator1Checkbox"
             AbsoluteLayout.LayoutBounds="0.65 , 0.59 , 50, 50"
             AbsoluteLayout.LayoutFlags="PositionProportional"
             CheckedChanged="CheckBox_CheckedChanged"/>
-        <Label 
+        <Label IsVisible="False"
             x:Name="Investigator2Label"
             AbsoluteLayout.LayoutBounds="0,0.75 , 200,100"
             AbsoluteLayout.LayoutFlags="PositionProportional"
             Text="Investigator 2"
             Margin="20, 12" />
-        <CheckBox
+        <CheckBox IsVisible="False"
             x:Name="Investigator2Checkbox"
             AbsoluteLayout.LayoutBounds="0.65 , 0.68 , 50, 50"
             AbsoluteLayout.LayoutFlags="PositionProportional"
             CheckedChanged="CheckBox_CheckedChanged"/>
-        <Label 
+        <Label IsVisible="False"
             x:Name="Investigator3Label"
             AbsoluteLayout.LayoutBounds="0,0.85, 200,100"
             AbsoluteLayout.LayoutFlags="PositionProportional"
             Text="Investigator 3"
             Margin="20, 12" />
-        <CheckBox
+        <CheckBox IsVisible="False"
             x:Name="Investigator3Checkbox"
             AbsoluteLayout.LayoutBounds="0.65 , 0.771 , 50, 50"
             AbsoluteLayout.LayoutFlags="PositionProportional"
             CheckedChanged="CheckBox_CheckedChanged"/>
-        <Label
+        <Label IsVisible="False"
             x:Name="Investigator4Label"
             AbsoluteLayout.LayoutBounds="0,0.95 , 200,100"
             AbsoluteLayout.LayoutFlags="PositionProportional"
             Text="Investigator 4"
             Margin="20, 12" />
-        <CheckBox 
+        <CheckBox IsVisible="False"
             x:Name="Investigator4Checkbox"
             AbsoluteLayout.LayoutBounds="0.65 , 0.865 , 50, 50"
             AbsoluteLayout.LayoutFlags="PositionProportional"
             CheckedChanged="CheckBox_CheckedChanged"/>
 
-        <Button
+        <Button IsVisible="False"
             AbsoluteLayout.LayoutBounds="0.5 , 1.05 , 150, 150"
             AbsoluteLayout.LayoutFlags="PositionProportional"
             x:Name="DoneButton"

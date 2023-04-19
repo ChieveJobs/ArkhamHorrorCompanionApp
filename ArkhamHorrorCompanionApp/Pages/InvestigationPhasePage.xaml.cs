@@ -11,31 +11,32 @@ public partial class InvestigationPhasePage : ContentPage
         _gameSession = gameSession;
         Appearing += InvestigationPhasePage_Appearing;
         InitializeComponent();
-        InitializePlayers();
+        InitializeInvestigators();
     }
 
-    private void InitializePlayers()
+    private void InitializeInvestigators()
     {
-        if (_gameSession.PlayerCount > 1)
+        if (_gameSession.InvestigatorCount > 1)
         {
-            Player2Image.IsVisible = true;
+            Investigator2Image.IsVisible = true;
         }
-        if (_gameSession.PlayerCount > 2)
+        if (_gameSession.InvestigatorCount > 2)
         {
-            Player3Image.IsVisible = true;
+            Investigator3Image.IsVisible = true;
         }
-        if (_gameSession.PlayerCount > 3)
+        if (_gameSession.InvestigatorCount > 3)
         {
-            Player4Image.IsVisible = true;
+            Investigator4Image.IsVisible = true;
         }
     }
 
     private void InvestigationPhasePage_Appearing(object sender, EventArgs e)
     {
         var allActed = true;
-        foreach (var player in _gameSession.Players)
+
+        foreach (var investigator in _gameSession.Investigators)
         {
-            if (player.HasActed == false)
+            if (investigator.HasActed == false)
             {
                 allActed = false;
             }
@@ -51,21 +52,31 @@ public partial class InvestigationPhasePage : ContentPage
         }
     }
 
-    private void Player1Image_Clicked(object sender, EventArgs e)
+    private void Investigator1Image_Clicked(object sender, EventArgs e)
     {
-        ShowPlayerPage(0);
+        ShowInvestigatorPage(0);
     }
 
-    private void Player2Image_Clicked(object sender, EventArgs e)
+    private void Investigator2Image_Clicked(object sender, EventArgs e)
     {
-        ShowPlayerPage(1);
+        ShowInvestigatorPage(1);
     }
 
-    private void ShowPlayerPage(int position)
+    private void Investigator3Image_Clicked(object sender, EventArgs e)
     {
-        if (!_gameSession.Players.ElementAt(position).HasActed)
+        ShowInvestigatorPage(2);
+    }
+
+    private void Investigator4Image_Clicked(object sender, EventArgs e)
+    {
+        ShowInvestigatorPage(3);
+    }
+
+    private void ShowInvestigatorPage(int position)
+    {
+        if (!_gameSession.Investigators.ElementAt(position).HasActed)
         {
-            Navigation.PushAsync(new PlayerTurnPage(_gameSession, position));
+            Navigation.PushAsync(new InvestigatorTurnPage(_gameSession, position));
         }
     }
 

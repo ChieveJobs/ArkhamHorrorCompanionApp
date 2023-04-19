@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ArkhamHorrorCompanionApp.Pages.EnemyPhasePage"
-             Title="EnemyPhasePage">
+             Title="Enemy Phase">
     <AbsoluteLayout>
         <Label
             AbsoluteLayout.LayoutBounds="0.6,0.02,200,25"

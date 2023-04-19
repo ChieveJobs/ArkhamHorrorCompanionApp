@@ -1,10 +1,10 @@
-﻿using ArkhamHorrorCompanionApp.Enums;
-using ArkhamHorrorCompanionApp.Models;
+﻿using ArkhamHorrorCompanionApp.Models;
 
 namespace ArkhamHorrorCompanionApp.Pages;
 
 public partial class StartPage : ContentPage
 {
+    private GameSession _gameSession;
     public StartPage()
     {
         InitializeComponent();
@@ -12,22 +12,22 @@ public partial class StartPage : ContentPage
 
     private async void Begin_Clicked(object sender, EventArgs e)
     {
-        var selectedValue = PlayerCountPicker.SelectedIndex;
+        var selectedValue = InvestigatorCountPicker.SelectedIndex;
 
         if (selectedValue != -1)
         {
-            var gameSession = new GameSession();
+            _gameSession = new GameSession();
 
             for (int i = 0; i < (selectedValue + 1); i++)
             {
-                gameSession.Players.Add(new Player((i + 1)));
+                _gameSession.Investigators.Add(new Investigator((i + 1)));
             }
 
-            await Navigation.PushAsync(new MythosPhasePage(gameSession));
+            await Navigation.PushAsync(new MythosPhasePage());
         }
         else
         {
-            WarningLabel.IsVisible= true;
+            WarningLabel.IsVisible = true;
         }
 
     }

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ArkhamHorrorCompanionApp.MainPage"
-             Title="MainPage">
+             x:Class="ArkhamHorrorCompanionApp.Pages.InvestigationPhasePage"
+             Title="InvestigationPhasePage">
     <ScrollView>
         <VerticalStackLayout
-            Spacing="25"
+            Spacing="0"
             Padding="30,0">
             <Label
                 Text="Choose players turn"
@@ -30,7 +30,6 @@
                     SemanticProperties.Description="Player1"
                     HeightRequest="200"
                     HorizontalOptions="Center"
-                    IsVisible="False"
                     Clicked="Player1Image_Clicked"/>
 
                 <ImageButton
@@ -65,6 +64,14 @@
                     IsVisible="False"/>
 
             </Grid>
+
+            <Button 
+                x:Name="EnemyPhaseButton"
+                Text="Enemy Phase"
+                WidthRequest="200"
+                BackgroundColor="Red"
+                IsVisible="True"
+                Clicked="EnemyPhase_Clicked"/>
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

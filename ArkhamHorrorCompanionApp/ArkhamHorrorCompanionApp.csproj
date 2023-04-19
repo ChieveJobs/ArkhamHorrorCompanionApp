@@ -51,8 +51,12 @@
 	<ItemGroup>
 	  <None Remove="Resources\Fonts\Unutterable-z8E8X.ttf" />
 	  <None Remove="Resources\Fonts\UnutterableItalic-jE2E9.ttf" />
+	  <None Remove="Resources\Images\claw.png" />
+	  <None Remove="Resources\Images\elder_sign.png" />
+	  <None Remove="Resources\Images\enemy.png" />
 	  <None Remove="Resources\Images\player1image.png" />
 	  <None Remove="Resources\Images\player2image.png" />
+	  <None Remove="Resources\Images\red_arrow.png" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -61,10 +65,19 @@
 
 
 	<ItemGroup>
-	  <MauiXaml Update="MainPage.xaml">
+	  <MauiXaml Update="Pages\EnemyPhasePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="PlayerPage.xaml">
+	  <MauiXaml Update="Pages\InvestigationPhasePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\MythosPhasePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\PlayerTurnPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\UpkeepPhasePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
@@ -72,6 +85,19 @@
 
 	<ItemGroup>
 	  <Folder Include="Models\ViewModels\" />
+	</ItemGroup>
+
+
+	<ItemGroup>
+	  <Compile Update="Pages\EnemyPhasePage.xaml.cs">
+	    <DependentUpon>EnemyPhasePage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Pages\InvestigationPhasePage.xaml.cs">
+	    <DependentUpon>InvestigationPhasePage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Pages\PlayerTurnPage.xaml.cs">
+	    <DependentUpon>PlayerTurnPage.xaml</DependentUpon>
+	  </Compile>
 	</ItemGroup>
 
 </Project>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ArkhamHorrorCompanionApp.Pages.EnemyPhasePage"
+             Title="EnemyPhasePage">
+    <AbsoluteLayout>
+        <Label
+            AbsoluteLayout.LayoutBounds="0.6,0.02,200,25"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            Text="HUNTERS MOVE"
+            FontSize="20"
+            />
+        <Image
+            AbsoluteLayout.LayoutBounds="20, 80, 150, 150"
+            Source="enemy.png" />
+
+        <Image
+            AbsoluteLayout.LayoutBounds="200, 100, 100, 100"
+            Source="red_arrow.png"
+            WidthRequest="100"/>
+
+        <Button
+            AbsoluteLayout.LayoutBounds="0.5, 0.45, 170, 50"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            Text="Movement done" 
+            Clicked="MoveButton_Clicked"/>
+
+        <Label
+            x:Name="AttackLabel"
+            AbsoluteLayout.LayoutBounds="0.6,0.55,300,25"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            Text="ENGAGED ENEMIES AttACK"
+            FontSize="20"
+            IsVisible="False" />
+
+        <Image
+            x:Name="AttackEnemyImage"
+            AbsoluteLayout.LayoutBounds="20, 410, 150, 150"
+            Source="enemy.png" 
+            IsVisible="False" />
+
+        <Image
+            x:Name="AttackClawImage"
+            AbsoluteLayout.LayoutBounds="180, 410, 150, 150"
+            Source="claw.png" 
+            IsVisible="False" />
+
+        <Button
+            x:Name="AttackButton"
+            AbsoluteLayout.LayoutBounds="0.5, 0.95, 170, 50"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            Text="Attacks done" 
+            Clicked="AttackButton_Clicked"
+            IsVisible="False"/>
+    </AbsoluteLayout>
+</ContentPage>

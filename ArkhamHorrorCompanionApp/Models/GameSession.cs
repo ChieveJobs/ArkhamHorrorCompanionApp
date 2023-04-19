@@ -8,14 +8,21 @@ namespace ArkhamHorrorCompanionApp.Models
 
         public GamePhase GamePhase { get; set; }
 
-        public int PlayerCount { get; set; }
-        
         public List<Player> Players { get; set; }
 
-        public GameSession(int playerCount)
+        public int PlayerCount
         {
-            this.PlayerCount = playerCount;
-            Players = new List<Player>();  
+            get
+            {
+                return Players.Count;
+
+            }
+        }
+
+        public GameSession()
+        {
+            Players = new List<Player>();
+            Turn = 1;
         }
     }
 }

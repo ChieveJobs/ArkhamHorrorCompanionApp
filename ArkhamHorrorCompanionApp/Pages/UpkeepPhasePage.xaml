@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ArkhamHorrorCompanionApp.Pages.UpkeepPhasePage"
+             Title="UpkeepPhasePage">
+    <VerticalStackLayout>
+        <Grid
+            Margin="0, 20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="120" />
+                <RowDefinition Height="120" />
+                <RowDefinition Height="120" />
+                <RowDefinition Height="120" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Label
+                Grid.Row="0"
+                Grid.Column="0"
+                Text="Reset actions and flip minis"
+                Margin="30"/>
+            <Image
+                Grid.Row="0"
+                Grid.Column="1"
+                Source="enemy.png"
+                Margin="10"/>
+
+            <Label
+                Grid.Row="1"
+                Grid.Column="0"
+                Text="Ready all exhausted cards"
+                Margin="30"/>
+            <Image
+                Grid.Row="1"
+                Grid.Column="1"
+                Source="enemy.png"
+                Margin="10"/>
+
+            <Label
+                Grid.Row="2"
+                Grid.Column="0"
+                Text="Gain resource draw card"
+                Margin="30"/>
+            <Image
+                Grid.Row="2"
+                Grid.Column="1"
+                Source="enemy.png"
+                Margin="10"/>
+
+            <Label
+                Grid.Row="3"
+                Grid.Column="0"
+                Text="Check hand size"
+                Margin="30"/>
+            <Image
+                Grid.Row="3"
+                Grid.Column="1"
+                Source="enemy.png"
+                Margin="10"/>
+        </Grid>
+        <Button
+            Text="Done"
+            WidthRequest="200"
+            Margin="0, 50"
+            Clicked="DoneButton_Clicked"/>
+    </VerticalStackLayout>
+</ContentPage>

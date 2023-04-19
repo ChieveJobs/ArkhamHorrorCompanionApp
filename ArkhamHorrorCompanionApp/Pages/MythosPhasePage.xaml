@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ArkhamHorrorCompanionApp.Pages.MythosPhasePage"
+             Title="Mythos Phase">
+    <AbsoluteLayout>
+        <Label
+            AbsoluteLayout.LayoutBounds="0.6,0.005,360,100"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            Text="Add doOm to agenda, advance if needed"
+            FontSize="14"
+            Margin="16, 20"
+            />
+        <Image
+            AbsoluteLayout.LayoutBounds="0.5,0.15,150,150"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            Source="elder_sign.png" 
+            WidthRequest="200"/>
+
+        <Button 
+            AbsoluteLayout.LayoutBounds="0.5,0.45,0,150"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            Text="Done"
+            WidthRequest="100"
+            Margin="50"
+            Clicked="AddMythosButton_Clicked"/>
+
+        <!--! ENCOUNTER STUFF-->
+
+        <Label 
+            x:Name="Investigator1Label"
+            AbsoluteLayout.LayoutBounds="0,0.65 , 200,100"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            Text="Investigator 1"
+            Margin="20, 12"/>
+        <CheckBox
+            x:Name="Investigator1Checkbox"
+            AbsoluteLayout.LayoutBounds="0.65 , 0.59 , 50, 50"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            CheckedChanged="CheckBox_CheckedChanged"/>
+        <Label 
+            x:Name="Investigator2Label"
+            AbsoluteLayout.LayoutBounds="0,0.75 , 200,100"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            Text="Investigator 2"
+            Margin="20, 12" />
+        <CheckBox
+            x:Name="Investigator2Checkbox"
+            AbsoluteLayout.LayoutBounds="0.65 , 0.68 , 50, 50"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            CheckedChanged="CheckBox_CheckedChanged"/>
+        <Label 
+            x:Name="Investigator3Label"
+            AbsoluteLayout.LayoutBounds="0,0.85, 200,100"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            Text="Investigator 3"
+            Margin="20, 12" />
+        <CheckBox
+            x:Name="Investigator3Checkbox"
+            AbsoluteLayout.LayoutBounds="0.65 , 0.771 , 50, 50"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            CheckedChanged="CheckBox_CheckedChanged"/>
+        <Label
+            x:Name="Investigator4Label"
+            AbsoluteLayout.LayoutBounds="0,0.95 , 200,100"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            Text="Investigator 4"
+            Margin="20, 12" />
+        <CheckBox 
+            x:Name="Investigator4Checkbox"
+            AbsoluteLayout.LayoutBounds="0.65 , 0.865 , 50, 50"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            CheckedChanged="CheckBox_CheckedChanged"/>
+
+        <Button
+            AbsoluteLayout.LayoutBounds="0.5 , 1.05 , 150, 150"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            x:Name="DoneButton"
+            Text="Done"
+            WidthRequest="100"
+            Margin="50"
+            Clicked="DoneButton_Clicked"/>
+    </AbsoluteLayout>
+</ContentPage>

@@ -1,7 +1,7 @@
 ﻿using ArkhamHorrorCompanionApp.Enums;
 using ArkhamHorrorCompanionApp.Models;
 
-namespace ArkhamHorrorCompanionApp;
+namespace ArkhamHorrorCompanionApp.Pages;
 
 public partial class StartPage : ContentPage
 {
@@ -16,13 +16,14 @@ public partial class StartPage : ContentPage
 
         if (selectedValue != -1)
         {
-            var gameSession = new GameSession((selectedValue + 1));
+            var gameSession = new GameSession();
 
             for (int i = 0; i < (selectedValue + 1); i++)
             {
                 gameSession.Players.Add(new Player((i + 1)));
             }
-            await Navigation.PushAsync(new MainPage(gameSession));
+
+            await Navigation.PushAsync(new MythosPhasePage(gameSession));
         }
         else
         {

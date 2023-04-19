@@ -1,16 +1,23 @@
-namespace ArkhamHorrorCompanionApp;
+using ArkhamHorrorCompanionApp.Models;
 
-public partial class PlayerPage : ContentPage
+namespace ArkhamHorrorCompanionApp.Pages;
+
+public partial class PlayerTurnPage : ContentPage
 {
     private int _actionsTaken;
-    public PlayerPage()
+    private readonly int _playerNumber;
+    private GameSession _gameSession;
+    public PlayerTurnPage(GameSession gameSession, int playerNumber)
     {
+        _gameSession = gameSession;
+        _playerNumber = playerNumber;
         _actionsTaken = 0;
         InitializeComponent();
     }
 
     private void Done_Clicked(object sender, EventArgs e)
     {
+        _gameSession.Players.ElementAt(_playerNumber).HasActed = true;
         Navigation.PopAsync();
     }
 
